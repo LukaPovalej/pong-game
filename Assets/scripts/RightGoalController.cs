@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player1Controller : MonoBehaviour
+public class RightGoalController : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
