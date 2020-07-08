@@ -15,4 +15,11 @@ public class RightGoalController : MonoBehaviour
     {
         
     }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        BallController controller = col.gameObject.GetComponent<BallController>();
+        if (controller != null) {
+            Debug.Log("keks");
+        }
+    }
 }

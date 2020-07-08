@@ -15,4 +15,12 @@ public class LeftGoalController : MonoBehaviour
     {
         
     }
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        BallController controller = col.gameObject.GetComponent<BallController>();
+        if (controller != null) {
+            Debug.Log("League of legends");
+        }
+    }
 }
