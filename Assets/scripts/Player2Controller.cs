@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class Player2Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Vector3 initialPosition;
+    Rigidbody2D rigidbody;
+
     void Start()
     {
-        
+        initialPosition = transform.position;
+        rigidbody = GetComponent<Rigidbody2D>();
     }
+
+    public void resetPos()
+    {
+        transform.position = initialPosition;
+        rigidbody.velocity = Vector3.zero;
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -19,5 +29,9 @@ public class Player2Controller : MonoBehaviour
         else if (Input.GetKey(KeyCode.DownArrow)) {
             transform.Translate(Vector3.down * Time.deltaTime * 40f, Space.World);
         }
+    }
+    void OnCollisonExit2D(Collision2D other)
+    {
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 }

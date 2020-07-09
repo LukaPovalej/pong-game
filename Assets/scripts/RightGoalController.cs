@@ -19,7 +19,7 @@ public class RightGoalController : MonoBehaviour
     {
         BallController controller = col.gameObject.GetComponent<BallController>();
         if (controller != null) {
-            Debug.Log("keks");
+            controller.changeP1Score(1);
         }
     }
 }

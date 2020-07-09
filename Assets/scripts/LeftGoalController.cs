@@ -20,7 +20,7 @@ public class LeftGoalController : MonoBehaviour
     {
         BallController controller = col.gameObject.GetComponent<BallController>();
         if (controller != null) {
-            Debug.Log("League of legends");
+            controller.changeP2Score(1);
         }
     }
 }
